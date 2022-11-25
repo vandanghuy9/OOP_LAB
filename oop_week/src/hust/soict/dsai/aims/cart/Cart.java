@@ -118,5 +118,6 @@ public class Cart {
 		}
 		System.out.println("Total Cost: "+Float.toString(printTotalPrice()));
 		System.out.println("**********************************************");
+		
 	}
 }
