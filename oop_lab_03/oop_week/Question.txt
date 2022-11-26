@@ -1,0 +1,8 @@
+question 3
+1. Lí do sau khi gọi hàm swap, title 2 object không đổi vì java copy object jungleDVD và cinderellaDVD 
+thành 2 object mới cùng tham chiếu đến 2 object lưu giá trị jungleDVD và cinderellaDVD, 
+và truyền vào hàm, nên hàm swap chỉ đổi vị trí 2 bản copy, jungleDVD và cinderellaDVD vẫn giữ nguyên
+
+2. Khi gọi hàm changeTitle, Java cũng tạo copy của object jungleDVD cùng tham chiếu đến object 
+lưu giá trị jungleDVD. Khi thực hiện hàm setTitle, copy của jungleDVD cùng thực hiện thay title trên 
+object lưu giá trị jungleDVD, khiến object jungleDVD cùng tham chiếu đến đó cũng thay title
