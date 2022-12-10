@@ -1,0 +1,5 @@
+package hust.soict.dsai.aims.human;
+
+public abstract class Human {
+
+}

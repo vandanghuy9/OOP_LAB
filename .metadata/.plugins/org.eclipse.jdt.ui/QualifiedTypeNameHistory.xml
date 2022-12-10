@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.nio.file.Files"/>
+    <fullyQualifiedTypeName name="java.nio.file.Paths"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.test.cd.TrackInfor"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.media.DigitalVideoDisc"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.media.MediaComparatorByTitleCost"/>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.media.MediaComparatorByCostTitle"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.store.Store"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.media.Media"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.cart.Cart"/>
+</qualifiedTypeNameHistroy>
