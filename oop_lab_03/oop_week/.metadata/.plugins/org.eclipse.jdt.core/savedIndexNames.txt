@@ -1,5 +1,0 @@
-INDEX VERSION 1.131+D:\AimsProject\.metadata\.plugins\org.eclipse.jdt.core
-1067094681.index
-1177562956.index
-1865797976.index
-2730459363.index
