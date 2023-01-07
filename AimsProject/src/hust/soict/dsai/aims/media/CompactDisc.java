@@ -1,7 +1,12 @@
 package hust.soict.dsai.aims.media;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+import hust.soict.dsai.aims.exception.PlayerException;
 import hust.soict.dsai.test.cd.*;
 public class CompactDisc extends Disc implements Playable{
 	private String artist;
@@ -39,17 +44,33 @@ public class CompactDisc extends Disc implements Playable{
 	}
 	
 	public int getLength() {
-		int length =0;
-		for (int i=0;i<TrackList.size();i++) {
-			length+= TrackList.get(i).getLength();
-		}
 		return length;
 	}
 	@Override
-	public void play() {
-		for (int i=0;i<TrackList.size();i++) {
-			TrackList.get(i).play();
+	public void play() throws PlayerException{
+		if (this.length > 0) {
+			Iterator iter = TrackList.iterator();
+			Track nextTrack;
+			while (iter.hasNext()) {
+				nextTrack = (Track)iter.next();
+				try {
+					nextTrack.play();
+				}catch(PlayerException e) {
+					throw e;
+				}
+			}
 		}
+		else {
+			throw new PlayerException("CD length is non-positive");
+		}
+		
+		for (Track track : TrackList) {
+            try {
+                track.play();
+            } catch (PlayerException e) {
+                throw new RuntimeException(e);
+            }
+        }
 	}
 	
 	public String toString() {

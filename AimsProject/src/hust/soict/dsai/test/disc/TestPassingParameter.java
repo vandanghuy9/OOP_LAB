@@ -5,8 +5,8 @@ import hust.soict.dsai.aims.cart.*;
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
 public class TestPassingParameter {
 	public static void main(String[] args) {
-		DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle");
-		DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Cinderella");
+		DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle","cartoon","huy",15,75f);
+		DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Cinderella","cartoon","huy",15,75f);
 		jungleDVD.setCost(12.3f);
 		cinderellaDVD.setCost(15f);
 		System.out.println("Jungle DVD title: "+jungleDVD.getTitle());

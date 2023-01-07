@@ -1,4 +1,5 @@
 package hust.soict.dsai.test.cd;
+import hust.soict.dsai.aims.exception.PlayerException;
 import hust.soict.dsai.aims.media.*;
 public class Track implements Playable {
 	private String title;
@@ -20,7 +21,7 @@ public class Track implements Playable {
 		this.length = length;
 	}
 	@Override
-	public void play() {
+	public void play() throws PlayerException{
 		System.out.println("Track: "+this.title);
 		System.out.println("Length: "+this.length);
 	}

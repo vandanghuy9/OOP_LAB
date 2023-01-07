@@ -7,9 +7,13 @@ import hust.soict.dsai.aims.cart.*;
 import hust.soict.dsai.aims.media.*;
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
 public class Store {
-	private List<Media> itemsInStore = new ArrayList<Media>();
+	private ArrayList<Media> itemsInStore = new ArrayList<Media>();
+	
 	public Store() {
 		
+	}
+	public ArrayList<Media> getItemsinStore(){
+		return itemsInStore;
 	}
 	public boolean addMedia(Media newItem) {
 		if (!itemsInStore.contains(newItem)) {

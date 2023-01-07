@@ -3,19 +3,28 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import javax.naming.LimitExceededException;
+
+import hust.soict.dsai.aims.media.Book;
 import hust.soict.dsai.aims.media.Media;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;
-	private List<Media> itemsOrdered = new ArrayList<Media>(); 
+	private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList(); 
 	public Cart() {
-		
+		itemsOrdered.add(new Book("Chemistry","Dang Huy",12.3f,20));
+		itemsOrdered.add(new Book("Chemistry","Dang Huy",12.3f,20));
+		itemsOrdered.add(new Book("Chemistry","Dang Huy",12.3f,20));
 	}
-	public boolean addMedia(Media newItem) {
-		if (!itemsOrdered.contains(newItem)) {
+	public void addMedia(Media newItem) throws LimitExceededException{
+		if (!itemsOrdered.contains(newItem) && itemsOrdered.size() < 20) {
 			itemsOrdered.add(newItem);
-			return true;
+			
 		}
-		return false;
+		else {
+			throw new LimitExceededException("Error: the number of media has reached its limit");
+		}
 	}
 	
 	public void removeMedia(Media removeItem) {
@@ -162,5 +171,9 @@ public class Cart {
 	
 	public void emptyCart() {
 		itemsOrdered.clear();
+	}
+	
+	public ObservableList<Media> getItemsOrdered(){
+		return itemsOrdered;
 	}
 }

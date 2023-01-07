@@ -2,6 +2,8 @@ package hust.soict.dsai.aims.main;
 
 import java.util.Scanner;
 
+import javax.naming.LimitExceededException;
+
 import hust.soict.dsai.aims.cart.Cart;
 import hust.soict.dsai.aims.media.*;
 import hust.soict.dsai.aims.store.Store;
@@ -75,7 +77,11 @@ public class Aims {
 										mediaDetailOption = scan.nextInt();
 										switch(mediaDetailOption) {
 										case 1:{
-											cart.addMedia(foundItem);
+											try {
+												cart.addMedia(foundItem);
+											}catch(LimitExceededException e) {
+												System.err.println(e.getMessage());
+											}
 											break;
 										}
 										case 2:{
@@ -98,7 +104,12 @@ public class Aims {
 								String media_title = scan.nextLine();
 								if (store.checkItem(media_title) != null) {
 									Media newItem = store.checkItem(media_title);
-									cart.addMedia(newItem);
+									try {
+										cart.addMedia(newItem);
+									}catch(LimitExceededException e) {
+										System.err.println(e.getMessage());
+									}
+									
 									System.out.println("Added to cart");
 								}
 								else {
